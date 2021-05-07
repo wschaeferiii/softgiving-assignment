@@ -1,0 +1,19 @@
+{
+  "name": "softgiving-mock-payment-recorder",
+  "version": "1.0.0",
+  "description": "a sample lambda and dynamodb recording mock payments via braintree",
+  "main": "handler.js",
+  "scripts": {
+    "testLocal": "serverless invoke local -f mockPayment",
+    "test": "BRAINTREE_MERCHANT_ID= BRAINTREE_PUBLIC_KEY= BRAINTREE_PRIVATE_KEY= DYNAMODB_TABLE= jest"
+  },
+  "author": "wschaeferiii",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.902.0",
+    "braintree": "^3.4.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
